@@ -4,6 +4,7 @@
 const person = {
     name : 'John',
     age : 23,
+    a:3,
     city : 'Gomel',
     isProgrammer : true,
     stack:['HTML','CSS','JS'],
@@ -55,7 +56,90 @@ const person = {
 // const person2 = {};
 
 // for(let key in person){
-//     console.log(person[key]);
+//     if(Array.isArray(person[key])){
+//         person2[key] = person[key].slice();
+//     }
 //     person2[key] = person[key];
 // }
+// person.stack.push('react');
+
 // console.log(person2);
+
+
+
+
+
+// rest spread destructuring
+// const arr = [5,6,7,8,9];
+// const [a,b] = arr;
+
+// const { 
+//     age: personAge = 100, 
+//     lastName = 'Ivaniv',
+//     size:{
+//         height
+//     } = {height:999},
+//     stack:[a,b, ...kusokStacka],
+//     ...kusokPerson,
+//  } = person;
+// console.log(kusokStacka);
+
+                        //lastName = 'Ivaniv' , дефолтное значение запишется если нету такого поля у объекта person
+                        // аналог
+                        // const age = person.age;
+
+// const person2 = {
+//         a: 2,
+//      ...person,
+   
+// };
+// console.log(person2 );
+
+
+// объединение объектов 
+
+// const person3 = {
+//     pogremuha : 'lobzik',
+//     hodki : 6
+// }
+
+// const person2 = {
+//     ...person3,
+//     ...person
+// }
+
+// console.log(person2);
+
+
+//ПОЛНАЯ КОПИЯ ОБЪЕКТА   -------- ИСПОЛЬЗУЕТСЯ УЛЬТРАЧАСТО----
+
+// const person2  = {
+//     ...person,
+//     stack: [...person.stack],
+//     size: {...person.size}
+// };
+
+// console.log(person2.size === person.size);
+
+
+
+
+
+const nick = 'bobik';
+
+const dog = { 
+    age: 2,
+    nick
+}
+
+console.log(dog);
+
+
+const str = 'city';
+
+const userPerson = { 
+    name: 'Valerchik',
+    [srt] : 'Gomel'
+}
+
+

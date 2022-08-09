@@ -127,14 +127,48 @@ const arr3 = [false,true,false];
 
 
 
+//=========================================New============================================================================================
+
+// STRING METHOD!!!!!!!!!!
+
+// const str = 'i love ITSTEP very much';
+
+// console.log( str.split('v') );
+
+// rest, spread, destructuring
+
+// console.log( Math.max( ...arr4 ) );
+
+// const arr2 = ['one', 'two', 'three', 'two', 'zzzzz', 'xxxxx', 'ccccc', 'vvvvvv'];
+// const arr4 = [ 1,51,2,56, 89, 45, 1,3,4,5 ];
+
+// const arr5 = [ 20, ...arr4, undefined, false];
+// const arr6 = [...arr2, ...arr4];
+
+// arr5[0] = 100;
+
+// console.log(arr4);
+
+// const arr = ["one", "two", "three"];
+// const test = [];
+
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+
+// let [ a = 'default value for a', b = 'default value' ] = test;
+
+// const [atesttttt, b, ...blabla] = arr;
+
+// if (2 > 1) {
+//   for (;;) {
+//     break;
+//   }
+//   console.log();
+// } else console.log();
 
 
-
-
-
-
-
-
+//=========================================New=========================================================================================
 
 
 
@@ -146,6 +180,8 @@ let people1 = ['Samuel', 'Jack', 'Thomas','Henry','Leo','Connor','David','Ryan']
 let people2 = ['Connor','Stanley','Leo', 'Albert','Owen','Oliver','Ethan','Thomas'];
 
 // 1. Пользователь вводит имя, если это имя есть в массиве people1, добавьте это имя в конец people2.
+
+
 // 2. Пользователь вводит имя, если это имя есть в массиве people2, удалите это имя из массива.
 // 3. Создайте массив только из тех имен, которые совпадают в обоих массивах.
 // 4. Объедините массивы people1 и people2 так, чтобы в получившемся массиве не было одинаковых имен.

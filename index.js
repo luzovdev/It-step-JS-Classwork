@@ -249,19 +249,25 @@
 
 let person = {
     name: 'Vasia',
-    eat: eating
+    eat
 }
 
 
-let foods = ['Апельсин','Мандарин','Киви','Яблоки']
+let foods = ['Апельсин','Мандарин','Киви','Яблоки'];
 
+let index = 0;
 
-function eating (food) {
-
-    for(food of foods ){
-    
-    }
+function eat (fd) {
+     console.log(`${this.name} eats ${fd[index++]}`);
 }
+
+
+let result = setInterval(eat.bind(person,foods),1000);
+
+setTimeout(() => {
+    clearInterval(result);
+},4000);
+
 
 
 

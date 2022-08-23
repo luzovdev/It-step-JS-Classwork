@@ -253,7 +253,7 @@ let person = {
 }
 
 
-let foods = ['Апельсин','Мандарин','Киви','Яблоки'];
+let foods = ['Апельсин','Мандарин','Киви','Яблоки','Морковь','Ананасы','Помидоры'];
 
 let index = 0;
 
@@ -266,7 +266,7 @@ let result = setInterval(eat.bind(person,foods),1000);
 
 setTimeout(() => {
     clearInterval(result);
-},4000);
+},foods.length * 1000);
 
 
 

@@ -1,5 +1,15 @@
 
-// Создать функцию которая принимает массив футболистов (из предыдущего задания)
+// Создать функцию которая принимает массив футболистов
+// [
+// { name:"Ronaldo", team:"Juventus"}, 
+// { name:"Messi", team:"Barcelona"},
+// { name:"Pedro", team:"Chelsea" },
+// { name:"Rico" team:"PSG"},
+// { name:"Suarez", team:"Barcelona" },
+// { name:"Buffon", team:"Juventus" },
+// { name:"Zuma", team:"Chelsea" },
+// { name:"Gonsalo", team:"Juventus"}
+// ]
 // Функция должна "пробегать" по массиву и выяснять какие футболисты играют в одинаковых командах.
 // функция должна возвращать двумерный массив футболистов сформированный по принципу: 1 массив - 1 команда
 // пример возвращаемого массива:
@@ -42,17 +52,41 @@
 // 	],
 // 	[
 // 		{
-// 		name:"PSG",
-// 		team:"Rico"
+// 		name:"Rico",
+// 		team:"PSG"
 // 		}
 // 	]
 // ]
 
 
+// const players = [
+//     { name:"Ronaldo", team:"Juventus"}, 
+//     { name:"Messi", team:"Barcelona"},
+//     { name:"Pedro", team:"Chelsea" },
+//     { name:"Rico", team:"PSG"},
+//     { name:"Suarez", team:"Barcelona" },
+//     { name:"Buffon", team:"Juventus" },
+//     { name:"Zuma", team:"Chelsea" },
+//     { name:"Valerchik", team: "Vedrich97" },
+//     { name:"Gonsalo", team:"Juventus"}
+// ];
 
 
+// const playersByTeams = players.reduce((teamsObj, item) => {
+    
+//     if (teamsObj[item.team] !== undefined) {
+//         teamsObj[item.team].push(item);
+//     }  else {
+//         teamsObj[item.team] = [item];
+//     }
 
+//     return teamsObj;
 
+// }, {});
+
+// const result = Object.keys(playersByTeams).map((teamName) => playersByTeams[teamName]);
+
+// console.log(result);
 
 
 // // 2. 
@@ -140,7 +174,13 @@
 
 // const arrCars = [car, car2, car3];
 
+// const arrReult = arrCars.reduce((acc,item) => {
 
+
+
+
+//     return acc
+// },[])
 
 // 2.1 отфильтровать авто так чтобы в результирующий массив вошли
 // только машины из региона минск
@@ -247,26 +287,95 @@
 // person.name + " eats " + food
 // Используя setTimeout или setInterval запустите метод eat объекта person раз в секунду, передавая при этом каждый раз следующее название еды из массива.
 
-let person = {
-    name: 'Vasia',
-    eat
+// let person = {
+//     name: 'Vasia',
+//     eat
+// }
+
+
+// let foods = ['Апельсин','Мандарин','Киви','Яблоки','Морковь','Ананасы','Помидоры'];
+
+// let index = 0;
+
+// function eat (fd) {
+//      console.log(`${this.name} eats ${fd[index++]}`);
+// }
+
+
+// let result = setInterval(eat.bind(person,foods),1000);
+
+// setTimeout(() => {
+//     clearInterval(result);
+// },foods.length * 1000);
+
+
+
+
+// Доп задания
+
+// 1
+
+// Дана строка
+// var str = ‘Мама мыла раму’;
+// Написать функцию toWash(str, thing);
+// Где str - это строка в которой надо поменять последнее
+// слово, а thing - это, то самое слово которое надо вставить
+// в конец строки.
+// Функция должна возвращать строку.
+// Например:
+// document.write( toWash(str, ’машину’) );
+// // ‘Мама мыла машину’
+// document.write( toWash(str, ’рябину’) );
+// // ‘Мама мыла рябину’
+// document.write( toWash(str, ‘картину’) );
+// // ‘Мама мыла картину’
+
+// let str = 'Мама мыла раму';
+
+// function toWash(string,thing){
+//     let newString = string.split(' ');
+//     newString[newString.length - 1] = thing;
+
+//     return newString.join();
+// }
+
+
+// console.log(toWash(str,'машину'));
+// console.log(toWash(str,'рябину'));
+// console.log(toWash(str,'картину'));
+
+
+// 2.
+// . Взять массив футболистов из задачи 1. Напишите функцию
+// addAbility(array), которая добавляет к каждому
+// объекту массива функцию run(), при запуске которой
+// выводится сообщение (“ИМЯ_ФУТБОЛИСТА is
+// running”)
+
+
+let players = [
+    { name:"Ronaldo", team:"Juventus"}, 
+    { name:"Messi", team:"Barcelona"},
+    { name:"Pedro", team:"Chelsea" },
+    { name:"Rico" ,team:"PSG"},
+    { name:"Suarez", team:"Barcelona" },
+    { name:"Buffon", team:"Juventus" },
+    { name:"Zuma", team:"Chelsea" },
+    { name:"Gonsalo", team:"Juventus"}
+];
+
+function addAbility(pl){
+    for(player of pl){
+        player.run = function () {
+            return `${this.name} is running`
+        }
+    }
 }
 
+addAbility(players);
 
-let foods = ['Апельсин','Мандарин','Киви','Яблоки','Морковь','Ананасы','Помидоры'];
+console.log(players[2].run());
 
-let index = 0;
-
-function eat (fd) {
-     console.log(`${this.name} eats ${fd[index++]}`);
-}
-
-
-let result = setInterval(eat.bind(person,foods),1000);
-
-setTimeout(() => {
-    clearInterval(result);
-},foods.length * 1000);
 
 
 

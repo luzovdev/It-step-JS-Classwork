@@ -188,6 +188,34 @@
 // значения (true, false).
 
 
+// function createToggler() {
+
+    //    let toggler = false;
+    //    let countOfToggle = 0;
+    
+    //    return function () {
+    //       if (countOfToggle % 2 === 0) {
+    //          countOfToggle++
+    //          return toggler
+    //       } else {
+    //          countOfToggle++
+    //          return !toggler
+    //       }
+    
+    //    }
+    // }
+    
+    // let toggleMe = createToggler();
+    
+    // console.log(toggleMe());
+    // console.log(toggleMe());
+    // console.log(toggleMe());
+    // console.log(toggleMe());
+    // console.log(toggleMe());
+    // console.log(toggleMe());
+    // console.log(toggleMe());
+    // console.log(toggleMe());
+
 // 2. Создать функцию funcCounter(), которая способна
 // считать количество своих вызовов. Если передать в эту
 // функцию число меньше 10, то функция считает
@@ -195,6 +223,37 @@
 // если передать число больше 10, то функция считает
 // количество от этого числа до 0
 
+
+
+// function countMaker() {
+//    let count = 0;
+//    let shouldRaise = true;
+
+//    return function (num) {
+//       if (num && !isNaN(num)) {
+//          count = num;
+//          shouldRaise = num < 10;
+//       }
+
+//       if (shouldRaise) {
+//          return ++count;
+//       } else {
+//          return count ? --count : 0;
+//       }
+//    };
+// }
+
+// let funcCounter = countMaker();
+
+// console.log(funcCounter(15));
+// console.log(funcCounter(14));
+// console.log(funcCounter(13));
+// console.log(funcCounter(12));
+// console.log(funcCounter(11));
+// console.log(funcCounter(10));
+// console.log(funcCounter(9));
+// console.log(funcCounter(8));
+// console.log(funcCounter(7));
 
 // 3. Создать функцию classNameEditor(), которая
 // принимает строку с названием класса и добавляет
@@ -216,12 +275,54 @@
 // .join()
 
 
+// function createClass() {
+//    let arr = [];
+//    return function (className, boole) {
+//       if (boole) {
+//          arr.push(className)
+//          return arr.join(' ')
+//       } else {
+//          if (arr.includes(className)) {
+//             arr.splice(arr.indexOf(className), 1)
+//             return arr.join(' ')
+//          } else {
+//             return arr.join(' ')
+//          }
+//       }
+//    }
+// }
+
+// let classNameEditor = createClass();
+
+
+// console.log(classNameEditor('active', true));
+// console.log(classNameEditor('test', true));
+// console.log(classNameEditor('btn', true));
+// console.log(classNameEditor('test', false));
+// console.log(classNameEditor('blabla', false));
+
+
+
 // 4. Создать функцию, которая принимает массив и callback. Функция
 // должна каждый элемент массива обрабатывать callback’ом.
 
 // arr.map(() => {})
 // map(arr, () => {})
 
+
+// function map(arr, callback) {
+//    let item;
+//    let newArr = []
+//    for (let i = 0; i < arr.length; i++) {
+//       item = arr[i];
+//       newArr.push(callback(item))
+//    }
+//    return newArr
+// }
+
+
+
+// console.log(map([1, 2, 3, 4, 5, 6, 7], item => item + ''));
 
 
 

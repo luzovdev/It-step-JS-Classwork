@@ -170,12 +170,18 @@ class Programmer extends Person{
 
 class JSProgrammer extends Programmer {
     smoozie = true;
+
+    run (){ // method ovveride
+        console.log('In a fushion way');
+        super.run()
+    }
 }
 
 
 const jsp = new JSProgrammer(['CSS','JS'],'Oleg');
 
 console.log(jsp);
+jsp.run()
 
 
 

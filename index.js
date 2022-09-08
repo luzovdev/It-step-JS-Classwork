@@ -168,20 +168,51 @@ class Programmer extends Person{
 // console.log(p2);
 
 
-class JSProgrammer extends Programmer {
-    smoozie = true;
+// class JSProgrammer extends Programmer {
+//     smoozie = true;
 
-    run (){ // method ovveride
-        console.log('In a fushion way');
-        super.run()
-    }
-}
+//     run (){ // method ovveride
+//         console.log('In a fushion way');
+//         super.run()
+//     }
+// }
 
 
-const jsp = new JSProgrammer(['CSS','JS'],'Oleg');
+// const jsp = new JSProgrammer(['CSS','JS'],'Oleg');
 
-console.log(jsp);
-jsp.run()
+// console.log(jsp);
+// jsp.run()
+
+
+
+
+
+//Статические методы класса --- прикручен к самому классу а не к инстансу
+
+
+// class JSProgrammer extends Programmer {
+//     smoozie = true;
+        // static = 2;
+//     static getSmoozie (front){
+//         front.smoozie = true;
+//     }
+
+//     run (){ // method ovveride
+//         console.log('In a fushion way');
+//         super.run()
+//     }
+// }
+
+
+// const jsp = new JSProgrammer(['CSS','JS'],'Oleg');
+
+// jsp.smoozie = false;
+
+// JSProgrammer.getSmoozie(jsp)
+
+// console.log(jsp);
+
+
 
 
 

@@ -15,79 +15,79 @@
 // переданного в момент вызова метода.
 
 
-// class Human {
-//    constructor(name, age) {
-//       this.name = name;
-//       this.age = age;
-//    }
+class Human {
+   constructor(name, age) {
+      this.name = name;
+      this.age = age;
+   }
 
-//    sayHi() {
-//       console.log('Hi');
-//    }
-// }
-
-
-// class Programmer extends Human {
-
-//    constructor(technologies, ...args) {
-//       super(...args)
-//       this.technologies = technologies;
-//    }
-
-//    startCoding() {
-//       console.log(`${this.name} is coding using ${this.technologies}`);
-//    }
-// }
+   sayHi() {
+      console.log('Hi');
+   }
+}
 
 
-// const programmer1 = new Programmer(['Html', 'Css', 'Js', 'React'], 'Valerchik', 51);
-// const programmer2 = new Programmer(['Html', 'Css', 'Js', 'Vue'], 'Dimonchik', 22)
+class Programmer extends Human {
 
-// console.log(programmer1.startCoding());
-// console.log(programmer2.startCoding());
+   constructor(technologies, ...args) {
+      super(...args)
+      this.technologies = technologies;
+   }
 
-
-// class Sportsman extends Human {
-//    constructor(medals, ...args) {
-//       super(...args);
-//       this.medals = medals;
-//    }
-// }
-
-// const sportsman = new Sportsman(['3 golds', '5 silver', '8 bronze'], 'Vova', 24);
-// console.log(sportsman);
+   startCoding() {
+      console.log(`${this.name} is coding using ${this.technologies}`);
+   }
+}
 
 
-// class FootballPlayer extends Sportsman {
-//    constructor(team, ...args) {
-//       super(...args);
-//       this.team = team;
-//    }
+const programmer1 = new Programmer(['Html', 'Css', 'Js', 'React'], 'Valerchik', 51);
+const programmer2 = new Programmer(['Html', 'Css', 'Js', 'Vue'], 'Dimonchik', 22)
 
-//    run(speed) {
-//       console.log(`${this.name} is running ${speed} kmph`);
-//    }
-// }
+console.log(programmer1.startCoding());
+console.log(programmer2.startCoding());
 
 
-// const footballPlayer = new FootballPlayer('barcelona', ['5 silver', '8 bronze'], 'Sanya', 34)
-// console.log(footballPlayer);
+class Sportsman extends Human {
+   constructor(medals, ...args) {
+      super(...args);
+      this.medals = medals;
+   }
+}
+
+const sportsman = new Sportsman(['3 golds', '5 silver', '8 bronze'], 'Vova', 24);
+console.log(sportsman);
 
 
-// class HockeyPlayer extends Sportsman {
-//    constructor(weight, ...args) {
-//       super(...args);
-//       this.weight = weight;
-//    }
+class FootballPlayer extends Sportsman {
+   constructor(team, ...args) {
+      super(...args);
+      this.team = team;
+   }
 
-//    pushOpponent(opponentName) {
-//       console.log(`${this.name} pushed ${opponentName} and used ${this.weight}kgs`);
-//    }
-// }
+   run(speed) {
+      console.log(`${this.name} is running ${speed} kmph`);
+   }
+}
 
 
-// const hockeyPlayer = new HockeyPlayer(156, 'no medals', 'Mike', 19)
-// console.log(hockeyPlayer.pushOpponent('Viktor'));
+const footballPlayer = new FootballPlayer('barcelona', ['5 silver', '8 bronze'], 'Sanya', 34)
+console.log(footballPlayer);
+
+
+class HockeyPlayer extends Sportsman {
+   constructor(weight, ...args) {
+      super(...args);
+      this.weight = weight;
+   }
+
+   pushOpponent(opponentName) {
+      console.log(`${this.name} pushed ${opponentName} and used ${this.weight}kgs`);
+   }
+}
+
+
+const hockeyPlayer = new HockeyPlayer(156, 'no medals', 'Mike', 19)
+console.log(hockeyPlayer.pushOpponent('Viktor'));
 
 
 
@@ -117,28 +117,28 @@
 // параметра (width, length, height)
 
 
-// class Product {
-//    constructor(nameOfProduct, priceOfProduct, colorOfProduct, params) {
-//       this.name = nameOfProduct;
-//       this.price = priceOfProduct;
-//       this.color = colorOfProduct;
-//       this.params = params;
-//    }
-// }
+class Product {
+   constructor(nameOfProduct, priceOfProduct, colorOfProduct, params) {
+      this.name = nameOfProduct;
+      this.price = priceOfProduct;
+      this.color = colorOfProduct;
+      this.params = params;
+   }
+}
 
-// class Params {
-//    constructor(width, lenght, height) {
-//       this.width = width;
-//       this.lenght = lenght;
-//       this.height = height;
-//    }
-// }
-
-
-// const phone = new Product('Iphone 13', '999$', 'Black', new Params('7,65', '71,5', '146,7'))
+class Params {
+   constructor(width, lenght, height) {
+      this.width = width;
+      this.lenght = lenght;
+      this.height = height;
+   }
+}
 
 
-// console.log(phone);
+const phone = new Product('Iphone 13', '999$', 'Black', new Params('7,65', '71,5', '146,7'))
+
+
+console.log(phone);
 
 
 

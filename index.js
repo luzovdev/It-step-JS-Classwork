@@ -161,39 +161,129 @@
 
 // --------------------------------------- про всплытие и перехват -------------------------------------------------
 
+// const wrapper = document.getElementById('wrapper');
+// const list = document.getElementById('list');
+// const firstItem = document.getElementById('fitem');
+// const pItem =   document.getElementById('pitem');
+
+// wrapper.addEventListener('click', () =>{
+//     console.log('WRAPPER');
+// });
+// list.addEventListener('click', () =>{
+//     console.log('LIST');
+// });
+
+// const liListener = (event) =>{
+//     // event.stopPropagation();
+//     event.stopImmediatePropagation();
+//     console.log('LI');
+// };
+// const secondLiListener = (event) =>{
+//     console.log('LI SECOND');
+// };
+
+// firstItem.addEventListener('click', liListener);
+// firstItem.addEventListener('click', secondLiListener);
+
+// pItem.addEventListener('click', () =>{
+//     console.log('P');
+// });
 
 
 
 
+// --------------------------------------------------------------------------------------------------
+// const list = document.getElementById('list');
+// const pItem =   document.getElementById('pitem');
+// console.log(list.innerText);
+// console.log(list.innerHTML);
+
+// pItem.innerText = '<h1>Hello</h>';
+// pItem.innerHTML = '<h1>Hello</h>';
+
+
+// ------------------------------------------ПРО АТРИБУТЫ--------------------------------------------------------
+// const pItem =   document.getElementById('pitem');
+// pItem.addEventListener('click', () =>{
+//     // pItem.setAttribute('wasClicked','true');
+//     // console.log(pItem.getAttribute('wasClicked'));
+//     // const pItemCopy = pItem.cloneNode(true); // true - значение обозначает что будет глубокое копирование
+//     // console.log(pItemCopy);
+//     // console.log(pItem);
+//     // pItem.dataset.smth = 'ppp'
+
+//     // console.log(pItem.dataset.smth);
+// })
+
+
+// ------------------------------------------ПРО Удаление--------------------------------------------------------
+// const pItem =   document.getElementById('pitem');
+// pItem.addEventListener('click', () =>{
+//     pItem.remove();
+//     console.log(pItem);
+// })
+
+
+// ------------------------------------------ПРО Добавление Элементов--------------------------------------------------------
+
+// const list = document.getElementById('list');
+// list.addEventListener('click',() => {
+//     const newLi = document.createElement('li');
+//     newLi.innerText = 'some text here';
+
+
+//     // const bratik = list.getElementsByTagName('li')[2];
+//     // list.insertBefore(newLi,bratik)
+
+//     // list.append(newLi); // --добавение в конец
+//     // list.prepend(newLi) // -- добавление в начало
+//     // list.insertAdjacentElement('afterbegin',newLi);
+//     // list.insertAdjacentElement('afterend',newLi);
+//     // list.insertAdjacentElement('beforebegin',newLi);
+//     // list.insertAdjacentElement('beforeend',newLi);
+
+
+//     // list.insertAdjacentHTML('afterbegin','<h1>Hello</h1>');
+//     // list.insertAdjacentText('afterbegin','<h1>Hello</h1>');
+
+
+
+// });
+
+
+
+// --------------------------------------------------------------------------------------------------
+
+
+// const list = document.getElementById('list');
+// list.addEventListener('click',() => {
+
+//     const item3 = list.getElementsByTagName('li')[2];
+//     // list.append(item3);
+//     // list.append(item3.cloneNode(true));
+// });
 
 
 
 
+// --------------------------------------------Работа с классами------------------------------------------------------
 
 
+const list = document.getElementById('list');
+const pItem = document.getElementById('pitem');
+
+// pItem.addEventListener('click',() => {
+//     pItem.style.backgroundColor = 'red'; -- так не правильно 
+// });
+
+pItem.addEventListener('click',() => {
+    // pItem.style.padding = clientX + 'px'; // так правильно так как зависит от js
+    // pItem.classList.add('active'); -- нужно отдавать предпочтение классу, а не node.style
+    // pItem.classList.remove('two');
+    // pItem.classList.contains('two');
+    // pItem.classList.replace('one','bla');
+    pItem.classList.toggle('active');
+});
 
 
-
-
-
-
-
-
-
-
-// задача
-
-const btn1 = document.querySelector('.btn1'),
-btn2 = document.querySelector('.btn2'),
-btn3 = document.querySelector('.btn3')
-
-function ok() {
-    console.log('ok');
-    this.addEventListener('click',ok)
-}
-
-function boom() {
-    console.log('boom');
-    this.addEventListener('click',boom)
-}
 
